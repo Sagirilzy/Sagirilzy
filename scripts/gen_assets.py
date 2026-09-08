@@ -9,6 +9,7 @@ Outputs (into assets/):
   divider.svg  - soft pastel gradient divider
 """
 
+import base64
 import os
 import sys
 
@@ -162,15 +163,37 @@ def cloud(cx, cy, delay):
     )
 
 
+def artwork_data_uri():
+    """Base64 data URI of assets/artwork.png, if present."""
+    path = os.path.join(OUT, "artwork.png")
+    if not os.path.exists(path):
+        return None
+    with open(path, "rb") as fh:
+        return "data:image/png;base64," + base64.b64encode(fh.read()).decode()
+
+
 def hero_svg():
     petals = "".join(petal(*p) for p in PETALS)
     stars = "".join(star(cx, cy, i * 0.7) for i, (cx, cy) in enumerate(STARS))
     clouds = "".join(cloud(cx, cy, i * 1.3) for i, (cx, cy) in enumerate(CLOUDS))
 
-    # chibi standing on the hill at left, cat on the hill at right
-    # feet at viewBox y=211.5; place them on the hill surface (~y 193-199)
-    scale = 0.68
-    gx, gy = 92, 199 - 211.5 * scale
+    # preferred: rounded art card floating at left; fallback: vector chibi
+    uri = artwork_data_uri()
+    if uri:
+        center = (
+            '<g class="bob">'
+            '<rect x="94" y="58" width="150" height="150" rx="18" fill="#8E4568" '
+            'opacity="0.18" transform="translate(0 6)"/>'
+            f'<image x="90" y="50" width="150" height="150" href="{uri}" '
+            'preserveAspectRatio="xMidYMid slice"/>'
+            '</g>'
+        )
+    else:
+        # chibi standing on the hill; feet at viewBox y=211.5, hill ~y 193-199
+        scale = 0.68
+        gx, gy = 92, 199 - 211.5 * scale
+        center = (f'<g transform="translate({gx},{gy}) scale({scale})">'
+                  f'<g class="bob">{chibi_inner()}</g></g>')
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="720" height="220" viewBox="0 0 720 220">
 <style>
@@ -212,7 +235,7 @@ def hero_svg():
 {clouds}
 {stars}
 {petals}
-<g transform="translate({gx},{gy}) scale({scale})"><g class="bob">{chibi_inner()}</g></g>
+{center}
 <!-- cat -->
 <g class="bob" style="animation-delay:0.4s">
   <path class="tail" d="M 585 185 Q 615 175 625 158 Q 630 150 622 152 Q 610 165 588 172 Z" fill="#B8B8C8"/>
