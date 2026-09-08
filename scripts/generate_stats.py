@@ -20,12 +20,14 @@ OUT_DIR = sys.argv[1] if len(sys.argv) > 1 else "assets"
 API = "https://api.github.com"
 FONT = "Segoe UI, -apple-system, Helvetica, Arial, sans-serif"
 
-# Soft pastel pink palettes, one per color-scheme mode.
+# Jirai-kei (地雷系) palettes: black x hot pink.
 PALETTE = {
-    "light": dict(border="#FFD6E8", title="#D97BA3", value="#C25E8E", label="#E8A8C4",
-                  bar=["#FFD6E8", "#FFB7D5", "#F79AC2", "#EF7FB3", "#E5629E", "#D94F8A"]),
-    "dark": dict(border="#5A3D4F", title="#F8BBD0", value="#FFE0EC", label="#C98BA4",
-                 bar=["#FFB7D5", "#EF7FB3", "#D94F8A", "#C25E8E", "#A8507A", "#8E4568"]),
+    "light": dict(bg="#1A1220", border="#FF5BAE", title="#FF8FC9", value="#FFFFFF",
+                  label="#FF8FC9",
+                  bar=["#FF5BAE", "#FF8FC9", "#E0439A", "#C72E86", "#A82372", "#8C1E5E"]),
+    "dark": dict(bg="#241A2E", border="#FF5BAE", title="#FF8FC9", value="#FFFFFF",
+                 label="#FF8FC9",
+                 bar=["#FF5BAE", "#FF8FC9", "#E0439A", "#C72E86", "#A82372", "#8C1E5E"]),
 }
 
 
@@ -89,7 +91,7 @@ def esc(text):
 
 def svg_head(p):
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="440" height="150" viewBox="0 0 440 150">'
-            f'<rect x="1.5" y="1.5" width="437" height="147" rx="8" fill="none" '
+            f'<rect x="1.5" y="1.5" width="437" height="147" rx="8" fill="{p["bg"]}" '
             f'stroke="{p["border"]}" stroke-width="1.5"/>')
 
 
