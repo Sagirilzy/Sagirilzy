@@ -5,7 +5,7 @@
 -->
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Sagirilzy/Sagirilzy/main/assets/hero.svg" width="720" alt="hero" />
+  <img src="https://raw.githubusercontent.com/Sagirilzy/Sagirilzy/main/assets/hero-jirai.svg" width="720" alt="hero" />
 </p>
 
 <p align="center">

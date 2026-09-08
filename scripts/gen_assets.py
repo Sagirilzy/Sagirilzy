@@ -272,7 +272,6 @@ def hero_svg():
 {bow(90, 52, 0.5)}
 {bear(332, 196, 1.0)}
 {bow(660, 34, 1.0)}
-<text x="700" y="216" text-anchor="end" font-family="sans-serif" font-size="13" fill="{PINK_PALE}">◞♡ yami kawaii ♡</text>
 {scallops(222)}
 </svg>
 """
@@ -296,7 +295,7 @@ def main():
     os.makedirs(OUT, exist_ok=True)
     for name, content in [
         ("mutsumi.svg", mutsumi_svg()),
-        ("hero.svg", hero_svg()),
+        ("hero-jirai.svg", hero_svg()),
         ("divider.svg", divider_svg()),
     ]:
         with open(os.path.join(OUT, name), "w") as fh:
