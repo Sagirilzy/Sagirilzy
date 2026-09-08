@@ -39,15 +39,15 @@
 
 <h2 align="center">Stats</h2>
 
-<!-- Auto-refreshes ~every 4h, adapts to light/dark mode -->
+<!-- Generated daily by .github/workflows/generate-stats.yml, adapts to light/dark mode -->
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=Sagirilzy&show_icons=true&hide_title=true&hide_rank=true&bg_color=00000000&title_color=BBBBBB&text_color=999999&icon_color=999999&border_color=30363D" />
-    <img src="https://github-readme-stats.vercel.app/api?username=Sagirilzy&show_icons=true&hide_title=true&hide_rank=true&bg_color=00000000&title_color=404040&text_color=606060&icon_color=909090&border_color=D0D0D0" alt="GitHub Stats" width="48%" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sagirilzy/Sagirilzy/main/assets/stats-dark.svg" />
+    <img src="https://raw.githubusercontent.com/Sagirilzy/Sagirilzy/main/assets/stats.svg" alt="GitHub Stats" width="48%" />
   </picture>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Sagirilzy&layout=compact&hide_title=true&langs_count=6&bg_color=00000000&title_color=BBBBBB&text_color=999999&border_color=30363D" />
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sagirilzy&layout=compact&hide_title=true&langs_count=6&bg_color=00000000&title_color=404040&text_color=606060&border_color=D0D0D0" alt="Top Languages" width="48%" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sagirilzy/Sagirilzy/main/assets/top-langs-dark.svg" />
+    <img src="https://raw.githubusercontent.com/Sagirilzy/Sagirilzy/main/assets/top-langs.svg" alt="Top Languages" width="48%" />
   </picture>
 </p>
 
