@@ -1,0 +1,48 @@
+name: Generate Stats Cards
+
+on:
+  schedule:
+    # 03:17 UTC daily (= 11:17 Beijing time)
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate stats cards
+        run: |
+          set -e
+          mkdir -p assets
+          fetch() {
+            # $1 = URL, $2 = output file; keep previous file on failure
+            for i in $(seq 1 5); do
+              curl -fsSL --connect-timeout 15 --max-time 60 "$1" -o "$2" \
+                && grep -q "<svg" "$2" && return 0
+              sleep 20
+            done
+            echo "::warning::Failed to fetch $1 after 5 attempts, keeping previous version"
+            return 1
+          }
+
+          fetch "https://github-readme-stats.vercel.app/api?username=Sagirilzy&show_icons=true&hide_title=true&hide_rank=true&bg_color=00000000&title_color=404040&text_color=606060&icon_color=909090&border_color=D0D0D0" assets/stats.svg || true
+          fetch "https://github-readme-stats.vercel.app/api?username=Sagirilzy&show_icons=true&hide_title=true&hide_rank=true&bg_color=00000000&title_color=BBBBBB&text_color=999999&icon_color=999999&border_color=30363D" assets/stats-dark.svg || true
+          fetch "https://github-readme-stats.vercel.app/api/top-langs/?username=Sagirilzy&layout=compact&hide_title=true&langs_count=6&bg_color=00000000&title_color=404040&text_color=606060&border_color=D0D0D0" assets/top-langs.svg || true
+          fetch "https://github-readme-stats.vercel.app/api/top-langs/?username=Sagirilzy&layout=compact&hide_title=true&langs_count=6&bg_color=00000000&title_color=BBBBBB&text_color=999999&border_color=30363D" assets/top-langs-dark.svg || true
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update stats cards"
+            git push
+          fi
