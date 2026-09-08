@@ -20,12 +20,12 @@ OUT_DIR = sys.argv[1] if len(sys.argv) > 1 else "assets"
 API = "https://api.github.com"
 FONT = "Segoe UI, -apple-system, Helvetica, Arial, sans-serif"
 
-# Minimal monochrome palettes, one per color-scheme mode.
+# Soft pastel pink palettes, one per color-scheme mode.
 PALETTE = {
-    "light": dict(border="#D0D0D0", title="#404040", value="#333333", label="#909090",
-                  bar=["#333333", "#555555", "#777777", "#999999", "#B0B0B0", "#C0C0C0"]),
-    "dark": dict(border="#30363D", title="#BBBBBB", value="#E6E6E6", label="#999999",
-                 bar=["#C9C9C9", "#A8A8A8", "#8A8A8A", "#707070", "#5A5A5A", "#4A4A4A"]),
+    "light": dict(border="#FFD6E8", title="#D97BA3", value="#C25E8E", label="#E8A8C4",
+                  bar=["#FFD6E8", "#FFB7D5", "#F79AC2", "#EF7FB3", "#E5629E", "#D94F8A"]),
+    "dark": dict(border="#5A3D4F", title="#F8BBD0", value="#FFE0EC", label="#C98BA4",
+                 bar=["#FFB7D5", "#EF7FB3", "#D94F8A", "#C25E8E", "#A8507A", "#8E4568"]),
 }
 
 
