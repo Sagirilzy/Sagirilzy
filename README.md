@@ -20,8 +20,8 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1500&color=FF8FC9&center=true&vCenter=true&width=560&height=60&lines=Hi%2C+I%27m+Sagirilzy;Student+%26+Python+Developer;Deep+Learning+%C2%B7+CV+%C2%B7+AI+Agents;Less+is+more;yami+kawaii+girl+%E2%99%A1" />
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1500&color=FF5BAE&center=true&vCenter=true&width=560&height=60&lines=Hi%2C+I%27m+Sagirilzy;Student+%26+Python+Developer;Deep+Learning+%C2%B7+CV+%C2%B7+AI+Agents;Less+is+more;yami+kawaii+girl+%E2%99%A1" alt="Typing SVG" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1500&color=FF8FC9&center=true&vCenter=true&width=560&height=60&lines=Hi%2C+I%27m+Sagirilzy;Student+%26+Python+Developer;Deep+Learning+%C2%B7+CV+%C2%B7+AI+Agents;Less+is+more" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1500&color=FF5BAE&center=true&vCenter=true&width=560&height=60&lines=Hi%2C+I%27m+Sagirilzy;Student+%26+Python+Developer;Deep+Learning+%C2%B7+CV+%C2%B7+AI+Agents;Less+is+more" alt="Typing SVG" />
   </picture>
 </p>
 
