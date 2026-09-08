@@ -267,9 +267,6 @@ def hero_svg():
 {hearts}
 {crosses}
 {sparks}
-<text x="24" y="70" font-family="sans-serif" font-size="21" fill="{PINK}">地</text>
-<text x="24" y="96" font-family="sans-serif" font-size="21" fill="{PINK}">雷</text>
-<text x="24" y="122" font-family="sans-serif" font-size="21" fill="{PINK}">系</text>
 {chain(52, 9)}
 {card}
 {bow(90, 52, 0.5)}
