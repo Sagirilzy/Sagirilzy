@@ -69,11 +69,8 @@
 
 <h2 align="center">Projects</h2>
 
-<!-- TODO: add descriptions, or swap in projects you're proud of -->
-<ul align="center" style="list-style:none; padding:0;">
-  <li><a href="https://github.com/Sagirilzy/COMP2090SEF_Task1">COMP2090SEF_Task1</a> — `description`</li>
-  <li><a href="https://github.com/Sagirilzy/COMP2090SEF_Task2">COMP2090SEF_Task2</a> — `description`</li>
-</ul>
+<!-- TODO: add project links once you have repos worth showing -->
+<p align="center"><em>Projects coming soon.</em></p>
 
 <hr />
 

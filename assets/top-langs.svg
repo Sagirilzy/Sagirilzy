@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="440" height="150" viewBox="0 0 440 150">
-  <rect x="1.5" y="1.5" width="437" height="147" rx="8" fill="none" stroke="#D0D0D0" stroke-width="1.5"/>
-  <text x="220" y="72" text-anchor="middle" font-family="Segoe UI, Helvetica, sans-serif" font-size="15" fill="#404040">Top Languages</text>
-  <text x="220" y="98" text-anchor="middle" font-family="Segoe UI, Helvetica, sans-serif" font-size="12" fill="#909090">updating…</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="150" viewBox="0 0 440 150"><rect x="1.5" y="1.5" width="437" height="147" rx="8" fill="none" stroke="#D0D0D0" stroke-width="1.5"/><text x="20" y="32" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#404040">Top Languages</text><text x="220" y="100" text-anchor="middle" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="12" fill="#909090">No public languages yet</text></svg>
